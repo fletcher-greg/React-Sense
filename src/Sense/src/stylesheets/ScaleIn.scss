@@ -6,19 +6,18 @@
   // animation: ScaleIn 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   // transform: none;
   // opacity: 1;
-  background: navajowhite;
-  
-  
+  background: white;
+
   > * {
-    animation: fadeChildrenIn .3s linear;
+    animation: fadeChildrenIn 0.3s linear;
   }
 }
 
 // @keyframes ScaleIn {
-//   from { 
-    
+//   from {
+
 //     transform: scale(var(--tW), var(--tH)) translate(calc(var(--tX) * 1px), calc(var(--tY) * 1px));
-    
+
 //   }
 // }
 

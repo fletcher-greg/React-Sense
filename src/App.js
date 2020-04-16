@@ -19,6 +19,8 @@ import Scrim from "./Sense/src/Scrim";
 import BasicScaleIn from "./examples/animation/BasicScaleIn";
 import Avatar from "./Sense/src/Avatar";
 import OutlineButton from "./Sense/src/OutlineButton";
+import TextField from "./Sense/src/TextField";
+import FormScaleIn from "./examples/animation/FormScaleIn";
 export default function App() {
   const [text, setText] = useState("useless placeholder");
   const [exists, setExists] = useState(false);
@@ -98,8 +100,8 @@ export default function App() {
           </DialogListBox>
         </Scrim>
       )}
-
-      <BasicScaleIn />
+      {/* <BasicScaleIn /> */}
+      <FormScaleIn />
     </div>
   );
 }

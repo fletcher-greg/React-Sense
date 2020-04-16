@@ -1,12 +1,19 @@
 import React from "react";
 
-export default function TextInput({ style, value, onChange }) {
-  const combinedStyles = combineStyles(buttonStylesStater, style);
+export default function TextInput({ style, value, onChange, className }) {
+  const combinedStyles = combineStyles(basicStyles, style);
 
-  return <input onChange={onChange} style={combinedStyles} value={value} />;
+  return (
+    <input
+      className={className}
+      onChange={onChange}
+      style={combinedStyles}
+      value={value}
+    />
+  );
 }
 
-const buttonStylesStater = { borderRadius: "4px" };
+const basicStyles = {};
 
 function combineStyles(style1, style2, condition = !style2) {
   if (condition) {

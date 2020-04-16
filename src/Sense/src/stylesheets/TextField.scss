@@ -1,0 +1,9 @@
+.TextField {
+  --bg: #f5f5f5;
+  --bg-focus-within: #e0e0e0;
+  background: var(--bg);
+  transition: background 0.18s ease-in-out;
+  &:focus-within {
+    background: var(--bg-focus-within);
+  }
+}

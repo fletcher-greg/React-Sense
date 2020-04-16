@@ -51,7 +51,7 @@ export default function BasicScaleIn(props) {
   return (
     <>
       {scaleIt && (
-        <ScaleIn scaleRef={scaleRef}>
+        <ScaleIn style={{ background: "navajowhite" }} scaleRef={scaleRef}>
           {" "}
           <DialogBox style={{ maxWidth: "auto" }}>
             <DialogTitle>Title</DialogTitle>
