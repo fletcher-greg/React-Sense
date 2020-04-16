@@ -1,0 +1,11 @@
+.Scrim {
+  animation: fadeInScrim .15s linear;
+  opacity: 1;
+  
+}
+
+@keyframes fadeInScrim{
+  from {
+    opacity: 0;
+  }
+}

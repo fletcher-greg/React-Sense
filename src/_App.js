@@ -1,24 +1,25 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import "./styles.scss";
 import AccountIcon from "./AccountIcon";
-
-import Flex from "./Sense/src/Flex";
-import View from "./Sense/src/View";
-import Text from "./Sense/src/Text";
-import TextInput from "./Sense/src/TextInput";
-import Button from "./Sense/src/Button";
-import WideButton from "./Sense/src/WideButton";
-import Grid from "./Sense/src/Grid";
-import DialogBox from "./Sense/src/DialogBox";
-import DialogTitle from "./Sense/src/DialogTitle";
-import DialogText from "./Sense/src/DialogText";
-import DialogListBox from "./Sense/src/DialogListBox";
-import List from "./Sense/src/List";
-import ListItem from "./Sense/src/ListItem";
-import Scrim from "./Sense/src/Scrim";
+import {
+  Flex,
+  View,
+  Text,
+  TextInput,
+  Button,
+  WideButton,
+  Grid,
+  DialogBox,
+  DialogTitle,
+  DialogText,
+  DialogListBox,
+  List,
+  ListItem,
+  Scrim,
+  OutlineButton,
+} from "./Sense/index";
 import BasicScaleIn from "./examples/animation/BasicScaleIn";
 import Avatar from "./Sense/src/Avatar";
-import OutlineButton from "./Sense/src/OutlineButton";
 export default function App() {
   const [text, setText] = useState("useless placeholder");
   const [exists, setExists] = useState(false);

@@ -1,0 +1,11 @@
+button.WideButton {
+  --bg: rgb(45, 9, 172);
+  --bg-hover: #6002ee;
+
+  flex-grow: 1;
+  background: var(--bg);
+  &:active{
+    background: var(--bg-hover);
+   transform: translate(0px, 2px);
+ }
+}

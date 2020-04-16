@@ -1,0 +1,32 @@
+.ScaleIn {
+  // --tX: 100%;
+  // --tY: 100%;
+  // --tH: 0;
+  // --tW: 0;
+  // animation: ScaleIn 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  // transform: none;
+  // opacity: 1;
+  background: navajowhite;
+  
+  
+  > * {
+    animation: fadeChildrenIn .3s linear;
+  }
+}
+
+// @keyframes ScaleIn {
+//   from { 
+    
+//     transform: scale(var(--tW), var(--tH)) translate(calc(var(--tX) * 1px), calc(var(--tY) * 1px));
+    
+//   }
+// }
+
+@keyframes fadeChildrenIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

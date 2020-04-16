@@ -1,0 +1,14 @@
+.DialogBox {
+  opacity: 1;
+  --bg: white;
+  animation: scaleIn .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: none;
+  background: var(--bg);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(.9);
+  }
+}

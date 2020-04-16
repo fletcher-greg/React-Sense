@@ -1,0 +1,12 @@
+.ListItem{
+  --bg: none;
+  --bg-hover: #EEEEEE;
+  --bg-active: #d4bff9;
+  background: var(--bg);
+  &:hover {
+    background: var(--bg-hover);
+  }
+  &:active {
+    background: var(--bg-active);
+  }
+}

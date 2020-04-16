@@ -1,0 +1,7 @@
+button.Button {
+  --bg:  #6002ee;
+  background:var(--bg);
+  &:active{
+    transform: translate(0px, 2px);
+  }
+}
