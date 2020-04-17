@@ -1,0 +1,9 @@
+svg.spinCross {
+  animation: spinning 0.5s ease-out;
+}
+
+@keyframes spinning {
+  to {
+    transform: rotate(360deg);
+  }
+}

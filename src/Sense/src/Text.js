@@ -1,5 +1,9 @@
 import React from "react";
 
-export default function Text({ style, children }) {
-  return <p style={style}>{children}</p>;
+export default function Text({ style, children, className }) {
+  return (
+    <p style={style} className={className}>
+      {children}
+    </p>
+  );
 }

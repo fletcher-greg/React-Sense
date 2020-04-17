@@ -1,14 +1,25 @@
 import React from "react";
 
-export default function TextInput({ style, value, onChange, className }) {
+export default function TextInput({
+  style,
+  value,
+  onChange,
+  className,
+  placeholder,
+  maxLength,
+  required,
+}) {
   const combinedStyles = combineStyles(basicStyles, style);
 
   return (
     <input
+      placeholder={placeholder}
       className={className}
       onChange={onChange}
       style={combinedStyles}
       value={value}
+      maxLength={maxLength}
+      required={required}
     />
   );
 }
