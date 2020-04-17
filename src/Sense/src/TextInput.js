@@ -1,4 +1,5 @@
 import React from "react";
+import Input from "./Input";
 
 export default function TextInput({
   style,
@@ -13,7 +14,7 @@ export default function TextInput({
   const combinedStyles = combineStyles(basicStyles, style);
 
   return (
-    <input
+    <Input
       type={type}
       placeholder={placeholder}
       className={className}

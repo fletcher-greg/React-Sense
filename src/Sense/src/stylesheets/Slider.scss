@@ -1,0 +1,42 @@
+.Slider[type="range"] {
+  -webkit-appearance: none;
+
+  width: 200px;
+}
+.Slider[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: none;
+  appearance: none;
+  //   border: none;
+}
+
+.Parent {
+  > * {
+    grid-area: 1 / 1;
+  }
+}
+.Wrapper {
+  z-index: 1;
+  width: 100%;
+  transform: translateX(calc(var(--pos) * 1%));
+  pointer-events: none;
+}
+.Circle {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+
+  background: navajowhite;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+
+  transform: translateY(-50%);
+}
