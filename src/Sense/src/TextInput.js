@@ -8,11 +8,13 @@ export default function TextInput({
   placeholder,
   maxLength,
   required,
+  type,
 }) {
   const combinedStyles = combineStyles(basicStyles, style);
 
   return (
     <input
+      type={type}
       placeholder={placeholder}
       className={className}
       onChange={onChange}

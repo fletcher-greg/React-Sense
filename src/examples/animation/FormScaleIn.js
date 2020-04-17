@@ -32,6 +32,7 @@ export default function FormScaleIn() {
         errorText: "Too many chars",
       });
     }
+
     setTextFull({ text: value, error: false, errorText: "" });
   };
   const setAnim = (dim) => {
@@ -117,6 +118,7 @@ export default function FormScaleIn() {
                 error={textFull.error}
                 maxLength={20}
                 errorText={textFull.errorText}
+                type="text"
               />
               <WideButton
                 onClick={() => setScaleIt((b) => !b)}

@@ -27,6 +27,7 @@ export default function TextFieldFull(props) {
         <TextField
           style={style}
           value={value}
+          type={type}
           onChange={onChange}
           maxLength={maxLength}
           required={required}

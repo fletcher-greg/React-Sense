@@ -12,6 +12,7 @@ export default function TextField(props) {
     placeholder,
     maxLength,
     required,
+    type,
   } = props;
   const combinedStyles = updateStyles(basicStyles, style);
   return (
@@ -23,6 +24,7 @@ export default function TextField(props) {
       style={combinedStyles}
       maxLength={maxLength}
       required={required}
+      type={type}
     />
   );
 }
