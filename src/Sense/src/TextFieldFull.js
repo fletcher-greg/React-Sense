@@ -6,6 +6,8 @@ import View from "./View";
 import Flex from "./Flex";
 import Text from "./Text";
 import ErrorIcon from "./smallComps/ErrorIcon";
+import Label from "./Label";
+import updateStyles from "./utils/updateStyles";
 export default function TextFieldFull(props) {
   const {
     style,
@@ -19,13 +21,14 @@ export default function TextFieldFull(props) {
     placeholder,
     helperText = "Helper Text",
     error,
+    label,
   } = props;
-
+  const combinedStyles = updateStyles(style, setVisibility(label));
   return (
     <View>
-      <Flex>
+      <Flex className="TextInputContainer">
         <TextField
-          style={style}
+          style={combinedStyles}
           value={value}
           type={type}
           onChange={onChange}
@@ -35,7 +38,16 @@ export default function TextFieldFull(props) {
           type={type}
           className={className ? className : "TextFieldFull"}
         />
+        {label && (
+          <Label
+            className="HelperLabel"
+            style={{ position: "absolute", top: "50%" }}
+          >
+            {label}
+          </Label>
+        )}
         {error && <ErrorIcon />}
+        <View className="TextFieldBorder" />
       </Flex>
       <Flex
         style={{
@@ -62,4 +74,10 @@ export default function TextFieldFull(props) {
 
 function formatLimit(value, maxLength) {
   return `${value.length} / ${maxLength}`;
+}
+function setVisibility(label) {
+  if (label) {
+    return { "--placeholder-visibility": "hidden" };
+  }
+  return { "--placeholder-visibility": "visible" };
 }

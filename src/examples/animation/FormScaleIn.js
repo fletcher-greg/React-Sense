@@ -88,7 +88,7 @@ export default function FormScaleIn() {
           </View>
         </Flex>
       </TopMenu>
-      <div style={{ height: "auto", minHeight: "90%" }}>
+      <div style={{ minHeight: "90%" }}>
         {scaleIt && (
           <ScaleIn scaleRef={scaleRef}>
             <List style={{ justifyContent: "space-evenly", height: "100%" }}>
@@ -119,6 +119,8 @@ export default function FormScaleIn() {
                 maxLength={20}
                 errorText={textFull.errorText}
                 type="text"
+                placeholder="Type something...I dare you"
+                label="hi friends"
               />
               <WideButton
                 onClick={() => setScaleIt((b) => !b)}

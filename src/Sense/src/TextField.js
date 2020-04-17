@@ -35,5 +35,5 @@ const basicStyles = {
   borderTopRightRadius: "4px",
   borderBottom: "1px solid grey",
   outline: "none",
-  padding: "20px 16px 6px",
+  padding: "20px 28px 6px",
 };
