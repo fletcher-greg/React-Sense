@@ -2,13 +2,17 @@ import React from "react";
 import View from "./View";
 
 export default function Grid(props) {
-  const { children, style } = props;
+  const { children, style, className } = props;
   const combinedStyles = updateStyles(gridStyles, style);
-  return <View style={combinedStyles}>{children}</View>;
+  return (
+    <View className={className ? className : "Grid"} style={combinedStyles}>
+      {children}
+    </View>
+  );
 }
 
 const gridStyles = {
-  display: "grid"
+  display: "grid",
 };
 
 function updateStyles(style1, style2, condition = !style2) {

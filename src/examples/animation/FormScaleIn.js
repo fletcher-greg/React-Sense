@@ -93,25 +93,21 @@ export default function FormScaleIn() {
           <ScaleIn scaleRef={scaleRef}>
             <List style={{ justifyContent: "space-evenly", height: "100%" }}>
               <TextField
-                style={{ margin: "2em 0" }}
                 placeholder="useless text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
               <TextField
-                style={{ margin: "2em 0" }}
                 placeholder="useless text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
               <TextField
-                style={{ margin: "2em 0" }}
                 placeholder="useless text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
               <TextField
-                style={{ margin: "2em 0" }}
                 placeholder="useless text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
@@ -124,7 +120,6 @@ export default function FormScaleIn() {
                 errorText={textFull.errorText}
                 type="text"
                 placeholder="Type something...I dare you"
-                label="hi friends"
               />
               <WideButton
                 onClick={() => setScaleIt((b) => !b)}

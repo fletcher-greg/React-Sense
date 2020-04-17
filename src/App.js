@@ -3,7 +3,7 @@ import { Switch, BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import ExampleOne from "./ExampleOne";
 import FormScaleIn from "./examples/animation/FormScaleIn";
-
+import SpeedDial from "./examples/animation/FabSpeedDial";
 export default function App() {
   return (
     <>
@@ -19,6 +19,9 @@ export default function App() {
           </Route>
           <Route path="/form-scale">
             <FormScaleIn />
+          </Route>
+          <Route path="/speed-dial">
+            <SpeedDial />
           </Route>
         </Switch>
       </Router>

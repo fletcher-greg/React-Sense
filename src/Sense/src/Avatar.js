@@ -2,10 +2,14 @@ import React from "react";
 import updateStyles from "./utils/updateStyles";
 
 export default function Avatar(props) {
-  const { children, style, onClick } = props;
+  const { children, style, onClick, className } = props;
   const combinedStyles = updateStyles(basicStyles, style);
   return (
-    <span onClick={onClick} style={combinedStyles}>
+    <span
+      className={className ? className : "Avatar"}
+      onClick={onClick}
+      style={combinedStyles}
+    >
       {children}
     </span>
   );
@@ -18,5 +22,5 @@ const basicStyles = {
   display: "inline-flex",
   justifyContent: "center",
   alignItems: "center",
-  marginRight: "16px"
+  marginRight: "16px",
 };
