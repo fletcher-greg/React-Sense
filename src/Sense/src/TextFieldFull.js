@@ -30,7 +30,6 @@ export default function TextFieldFull(props) {
         <TextField
           style={combinedStyles}
           value={value}
-          type={type}
           onChange={onChange}
           maxLength={maxLength}
           required={required}

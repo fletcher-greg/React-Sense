@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
+import React, { useState } from "react";
 import "./styles.scss";
 
 import AccountIcon from "./AccountIcon";
@@ -17,10 +17,10 @@ import DialogListBox from "./Sense/src/DialogListBox";
 import List from "./Sense/src/List";
 import ListItem from "./Sense/src/ListItem";
 import Scrim from "./Sense/src/Scrim";
-import BasicScaleIn from "./examples/animation/BasicScaleIn";
+
 import Avatar from "./Sense/src/Avatar";
 import OutlineButton from "./Sense/src/OutlineButton";
-import TextField from "./Sense/src/TextField";
+
 import FormScaleIn from "./examples/animation/FormScaleIn";
 export default function ExampleOne() {
   const [text, setText] = useState("useless placeholder");

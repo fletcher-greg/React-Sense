@@ -1,0 +1,8 @@
+.Divider {
+  --h: 2px;
+  --w: 100%;
+  --bg: #e0e0e0;
+  height: var(--h);
+  width: var(--w);
+  background: var(--bg);
+}

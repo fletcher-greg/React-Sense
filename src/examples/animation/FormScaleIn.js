@@ -7,7 +7,6 @@ import TextField from "../../Sense/src/TextField";
 import Fab from "../../Sense/src/Fab";
 import ScaleIn from "../../Sense/src/ScaleIn";
 import TopMenu from "../../Sense/src/TopMenu";
-import Text from "../../Sense/src/Text";
 import View from "../../Sense/src/View";
 import Cross from "./components/Cross";
 import Menu from "./components/Menu";
@@ -68,6 +67,7 @@ export default function FormScaleIn() {
         }
       );
     }
+    // eslint-disable-next-line
   }, [scaleIt]);
   return (
     <>

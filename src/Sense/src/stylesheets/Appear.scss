@@ -1,0 +1,11 @@
+.Appear {
+  opacity: 1;
+  animation: Appear 0.35s cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes Appear {
+  from {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+}

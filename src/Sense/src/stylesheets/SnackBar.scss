@@ -1,0 +1,12 @@
+.SnackBar {
+  animation: SnackBarAppear 0.15s ease-out;
+  transform: none;
+  opacity: 1;
+}
+
+@keyframes SnackBarAppear {
+  from {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}

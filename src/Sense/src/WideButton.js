@@ -16,12 +16,10 @@ export default function WideButton(props) {
   );
 }
 
-const buttonStylesStater = {};
+// function combineStyles(style1, style2, condition = !style2) {
+//   if (condition) {
+//     return Object.assign({}, ...style1);
+//   }
 
-function combineStyles(style1, style2, condition = !style2) {
-  if (condition) {
-    return Object.assign({}, ...style1);
-  }
-
-  return Object.assign({}, ...[...style1, style2]);
-}
+//   return Object.assign({}, ...[...style1, style2]);
+// }

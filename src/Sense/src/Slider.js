@@ -3,7 +3,6 @@ import Input from "./Input";
 import updateStyles from "./utils/updateStyles";
 import "./stylesheets/Slider.scss";
 import View from "./View";
-import Flex from "./Flex";
 import Grid from "./Grid";
 
 export default function Slider(props) {

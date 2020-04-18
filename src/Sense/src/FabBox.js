@@ -4,8 +4,6 @@ import View from "./View";
 import Fab from "./Fab";
 import Flex from "./Flex";
 import Avatar from "./Avatar";
-import Text from "./Text";
-import Grid from "./Grid";
 
 export default function FabBox(props) {
   const { data } = props;
@@ -31,6 +29,7 @@ export default function FabBox(props) {
                   objectFit: "cover",
                 }}
                 src={img}
+                alt="an img"
               />
             </Avatar>
           </Flex>
