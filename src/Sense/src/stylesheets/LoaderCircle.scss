@@ -1,0 +1,13 @@
+.LoaderCircle {
+  --length: 0;
+  --time: 2;
+  stroke-dasharray: var(--length);
+  stroke-dashoffset: var(--length);
+  animation: grow calc(var(--time) * 1s) cubic-bezier(0, 0.04, 0.5, 1) forwards;
+
+  @keyframes grow {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}

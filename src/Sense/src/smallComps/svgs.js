@@ -23,3 +23,33 @@ export function ChatIconSvg(props) {
     </svg>
   );
 }
+
+export function CheckSvg(props) {
+  return (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M0 0h24v24H0z" fill="none" />
+      <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z" />
+    </svg>
+  );
+}
+
+export function CircleSvg(props) {
+  const { svgRef, stroke, ...rest } = props;
+  return (
+    <svg
+      {...rest}
+      fill="none"
+      viewBox="0 0 50 50"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        ref={svgRef}
+        cx="25"
+        cy="25"
+        r="22.5"
+        stroke={stroke}
+        strokeWidth="5"
+      />
+    </svg>
+  );
+}

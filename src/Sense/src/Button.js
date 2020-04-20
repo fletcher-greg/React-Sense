@@ -25,14 +25,13 @@ export default function Button(props) {
 const stylesStarter = {
   button: {
     borderRadius: 2,
-    color: "white",
     outline: "none",
     cursor: "pointer",
     textTransform: "uppercase",
     boxShadow: "0px 0px 4px 2px rgba(0, 0, 0, .3)",
-    border: "none"
+    border: "none",
   },
-  text: {}
+  text: {},
 };
 
 function combineStyles(style1, style2) {

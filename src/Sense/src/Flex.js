@@ -2,10 +2,11 @@ import React from "react";
 import View from "./View";
 
 export default function Flex(props) {
-  const { children, style, className, onClick } = props;
+  const { children, style, className, onClick, scaleRef } = props;
   const combinedStyles = updateStyles(flexStyles, style);
   return (
     <View
+      scaleRef={scaleRef}
       onClick={onClick}
       className={className ? className : "Flex"}
       style={combinedStyles}
@@ -17,7 +18,7 @@ export default function Flex(props) {
 
 const flexStyles = {
   display: "flex",
-  flexDirection: "column"
+  flexDirection: "column",
 };
 
 function updateStyles(style1, style2, condition = !style2) {

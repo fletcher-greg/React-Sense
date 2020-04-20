@@ -1,7 +1,22 @@
 button.Button {
-  --bg:  #6002ee;
-  background:var(--bg);
-  &:active{
+  --bg: #6002ee;
+  --bg-hover: #d3c0fd;
+  --color: #3a0ff6;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color);
+  letter-spacing: 0.0892857em;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  min-height: 32px;
+  padding: 0px 8px;
+  transition: background 0.15s linear;
+  &:hover {
+    background: var(--bg-hover);
+  }
+  &:active {
     transform: translate(0px, 2px);
   }
 }

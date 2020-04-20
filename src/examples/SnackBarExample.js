@@ -9,6 +9,8 @@ import Flex from "../Sense/src/Flex";
 import Appear from "../Sense/src/Appear";
 import ChatIcon from "../Sense/src/ChatIcon";
 import ChoiceChip from "../Sense/src/ChoiceChip";
+import { CheckSvg } from "../Sense/src/smallComps/svgs";
+import LoaderCircle from "../Sense/src/LoaderCircle";
 
 export default function SnackBarExample() {
   const [appear, setAppear] = useState(true);
@@ -58,8 +60,20 @@ export default function SnackBarExample() {
         <ChoiceChip>Small</ChoiceChip>
       </View>
       <View style={{ width: 100 }}>
-        <ChoiceChip>Medium</ChoiceChip>
+        <ChoiceChip>
+          <span>Medium</span>
+        </ChoiceChip>
       </View>
+      <View style={{ width: 100 }}>
+        <ChoiceChip>
+          <View style={{ marginRight: "4px", height: 20 }}>
+            {" "}
+            <CheckSvg width="20" height="20" fill="#9c27b0" />
+          </View>
+          <span>Small</span>
+        </ChoiceChip>
+      </View>
+      <LoaderCircle />
       {appear && (
         <SnackBar
           onClick={toggle}

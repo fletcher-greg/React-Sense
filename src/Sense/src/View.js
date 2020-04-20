@@ -4,7 +4,7 @@ export default function View({
   children,
   onClick,
   className,
-  scaleRef
+  scaleRef,
 }) {
   return (
     <div ref={scaleRef} className={className} onClick={onClick} style={style}>

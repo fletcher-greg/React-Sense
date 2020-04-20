@@ -3,23 +3,21 @@ import "./stylesheets/WideButton.scss";
 import View from "./View";
 
 import Button from "./Button";
+import updateStyles from "./utils/updateStyles";
 
 export default function WideButton(props) {
-  const { children } = props;
+  const { children, style, ...rest } = props;
+  const combinedStyles = updateStyles(basicStyles, style);
 
   return (
     <View style={{ display: "flex" }}>
-      <Button className="WideButton" {...props}>
+      <Button style={combinedStyles} className="WideButton" {...rest}>
         {children}
       </Button>
     </View>
   );
 }
 
-// function combineStyles(style1, style2, condition = !style2) {
-//   if (condition) {
-//     return Object.assign({}, ...style1);
-//   }
-
-//   return Object.assign({}, ...[...style1, style2]);
-// }
+const basicStyles = {
+  "--color": "rgb(240, 240, 240)",
+};

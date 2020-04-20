@@ -11,9 +11,13 @@ export default function ChoiceChip(props) {
       className={className ? className : "ChoiceChip"}
       style={combinedStyles}
     >
-      <span>{children}</span>
+      {children}
     </Flex>
   );
 }
 
-const basicStyles = { minWidth: "maxContent", display: "inline-flex" };
+const basicStyles = {
+  minWidth: "maxContent",
+  flexDirection: "row",
+  display: "inline-flex",
+};

@@ -1,20 +1,37 @@
 .ChoiceChip {
   --bg: #f3e5f5;
-  --color: #ba68c8;
+  --color: #9c27b0;
+  --bg-hover: #e1bee7;
+  --justify-content: center;
   color: var(--color);
   background: var(--bg);
   border-radius: 16px;
   min-width: max-content;
   //   padding: 0.5em;
-  justify-content: center;
+  justify-content: var(--justify-content);
   align-items: center;
   padding: 0 12px;
   height: 32px;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.0178571429em;
   span {
     -webkit-font-smoothing: antialiased;
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
     letter-spacing: 0.0178571429em;
+  }
+  transition: background 0.1s linear;
+  &:hover {
+    transition: background 0.18s linear;
+    background: var(--bg-hover);
+  }
+
+  div.ChoiceChip-Svg_Wrap {
+    background: "red";
   }
 }

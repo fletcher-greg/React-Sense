@@ -8,6 +8,8 @@ import SliderExample from "./examples/SliderExample";
 import ScrimExample from "./examples/ScrimExample";
 import Resize from "./examples/Resize";
 import TempPlayGround from "./TempPlayGround";
+import CardExample from "./examples/CardExample";
+import ScaleCard from "./examples/animation/ScaleCard";
 export default function App() {
   return (
     <>
@@ -15,13 +17,33 @@ export default function App() {
         <Switch>
           <Route path="/" exact>
             <h1>Home</h1>
-            <Link to="/example-1">example 1</Link>
-            <Link to="/form-scale">form scale</Link>
-            <Link to="/speed-dial">speed dial</Link>
-            <Link to="/slider">slider</Link>
-            <Link to="/scrim">scrim</Link>
-            <Link to="/resize">resize</Link>
-            <Link to="/playground">TempPlayGround</Link>
+            <div>
+              <Link to="/example-1">example 1</Link>
+            </div>
+            <div>
+              <Link to="/form-scale">form scale</Link>
+            </div>
+            <div>
+              <Link to="/speed-dial">speed dial</Link>
+            </div>
+            <div>
+              <Link to="/slider">slider</Link>
+            </div>
+            <div>
+              <Link to="/scrim">scrim</Link>
+            </div>
+            <div>
+              <Link to="/resize">resize</Link>
+            </div>
+            <div>
+              <Link to="/playground">TempPlayGround</Link>
+            </div>
+            <div>
+              <Link to="/card">card</Link>
+            </div>
+            <div>
+              <Link to="/card-scale">Scale Card</Link>
+            </div>
           </Route>
           <Route path="/example-1">
             <ExampleOne />
@@ -43,6 +65,12 @@ export default function App() {
           </Route>
           <Route path="/playground">
             <TempPlayGround />
+          </Route>
+          <Route path="/card">
+            <CardExample />
+          </Route>
+          <Route path="/card-scale">
+            <ScaleCard />
           </Route>
         </Switch>
       </Router>

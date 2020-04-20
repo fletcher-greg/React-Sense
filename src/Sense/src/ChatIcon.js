@@ -5,11 +5,11 @@ import { ChatIconSvg } from "./smallComps/svgs";
 import updateStyles from "./utils/updateStyles";
 
 export default function ChatIcon(props) {
-  const { text, style } = props;
+  const { text, style, ...rest } = props;
   const combinedStyles = updateStyles(basicStyles, style);
   return (
     <Flex style={combinedStyles}>
-      <ChatIconSvg width={24} fill="white" height="24" />
+      <ChatIconSvg {...rest} />
       <Text>{text}</Text>
     </Flex>
   );
