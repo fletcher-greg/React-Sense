@@ -26,7 +26,7 @@ export default function getDimensions(ref, first) {
       },
     ],
     {
-      duration: 40000,
+      duration: 300,
       easing: "cubic-bezier(0, 0.5, 0.175, 1)",
       fill: "both",
     }

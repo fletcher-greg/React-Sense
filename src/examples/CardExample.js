@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import "./ToggleTest.scss";
 import Card from "../Sense/src/Card";
 import WideButton from "../Sense/src/WideButton";
@@ -10,14 +10,28 @@ import Button from "../Sense/src/Button";
 import View from "../Sense/src/View";
 
 export default function CardExample(props) {
-  const [view, setView] = useState("closed");
+  const [view, setView] = useState("view");
   const onClick = () => console.log("hi");
+  const [initial, setInitial] = useState(null);
+  const bottomRef = useRef(null);
   const clasy = view === "view" ? "ToggleTest" : "ToggleTest closed";
-  const toggle = () => {
-    console.log(view);
+  const toggle = (e) => {
+    const dim = e.currentTarget.getBoundingClientRect();
+    setInitial({
+      left: dim.left,
+      top: dim.top,
+      width: dim.width,
+      height: dim.height,
+    });
     view === "view" ? setView("closed") : setView("view");
   };
-  let array = Array(10).fill();
+  let array = Array(2).fill();
+  useLayoutEffect(() => {
+    console.log("hi");
+    if (initial) {
+      animate(initial, bottomRef);
+    }
+  }, [view]);
   return (
     <Flex
       style={{
@@ -78,7 +92,11 @@ export default function CardExample(props) {
           </View>
         </Flex>
       </Card>
-      <Card title="Hello World">
+      <Card
+        data={view === "view" ? "closed" : "view"}
+        title="Hello World"
+        className="Test"
+      >
         <Flex className={clasy}>
           {Array(5)
             .fill()
@@ -86,14 +104,52 @@ export default function CardExample(props) {
               <Text>Hi there people</Text>
             ))}
         </Flex>
-        <Divider />
-        <Button
-          style={{ "--bg": "none", alignSelf: "flex-start", boxShadow: "none" }}
-          onClick={toggle}
-        >
-          toggle
-        </Button>
+        <Flex scaleRef={bottomRef} onClick={(e) => toggle(e)}>
+          <Divider />
+          <Button
+            style={{
+              "--bg": "none",
+              alignSelf: "flex-start",
+              boxShadow: "none",
+            }}
+          >
+            toggle
+          </Button>
+        </Flex>
       </Card>
     </Flex>
+  );
+}
+
+function animate(first, ref) {
+  const last = ref.current.getBoundingClientRect();
+  const left = first.left - last.left;
+  const top = first.top - last.top;
+  const deltaW = first.width / last.width;
+  const deltaH = first.height / last.height;
+
+  // extra
+  let width = first.width - last.width;
+  let height = first.height - last.height;
+  console.log(left, top, deltaH, deltaW);
+  ref.current.animate(
+    [
+      {
+        transformOrigin: "top left",
+        transform: `
+        translate(${left}px, ${top}px)
+        scale(${deltaW}, ${deltaH})
+      `,
+      },
+      {
+        transformOrigin: "top left",
+        transform: "none",
+      },
+    ],
+    {
+      duration: 300,
+      easing: "cubic-bezier(0, 0.5, 0.175, 1)",
+      fill: "both",
+    }
   );
 }

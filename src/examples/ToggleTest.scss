@@ -2,11 +2,48 @@
   max-height: 0;
   overflow: hidden;
   opacity: 1;
-  transition: max-height 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335),
-    opacity 0.14s linear;
+  //   transition: max-height 0.25s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+  //     opacity 0.14s linear;
 }
 
 .ToggleTest.closed {
   opacity: 1;
   max-height: 100vh;
+}
+
+.Test {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+    rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: inherit;
+    z-index: -4;
+  }
+}
+
+.Test[data="closed"] {
+  &:after {
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px,
+      rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    animation: testing 3s cubic-bezier(0.5, 0, 0.5, 1);
+  }
+}
+
+@keyframes testing {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
 }

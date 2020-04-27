@@ -1,0 +1,10 @@
+.AvatarImage {
+  --img-height: auto;
+  --image-width: 100%;
+  display: block;
+  max-width: 100%;
+  width: var(--img-width);
+  height: var(--img-height);
+  border-radius: 50%;
+  overflow: hidden;
+}

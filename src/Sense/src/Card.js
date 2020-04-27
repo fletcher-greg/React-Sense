@@ -29,6 +29,7 @@ export default function Card(props) {
   }
   return (
     <Flex
+      data={data}
       scaleRef={scaleRef}
       {...rest}
       className={className ? className : "Card"}

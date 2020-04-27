@@ -2,10 +2,11 @@ import React from "react";
 import View from "./View";
 
 export default function Flex(props) {
-  const { children, style, className, onClick, scaleRef } = props;
+  const { children, style, className, onClick, scaleRef, data } = props;
   const combinedStyles = updateStyles(flexStyles, style);
   return (
     <View
+      data={data}
       scaleRef={scaleRef}
       onClick={onClick}
       className={className ? className : "Flex"}

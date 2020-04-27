@@ -10,6 +10,7 @@ import Resize from "./examples/Resize";
 import TempPlayGround from "./TempPlayGround";
 import CardExample from "./examples/CardExample";
 import ScaleCard from "./examples/animation/ScaleCard";
+import SocialIcons from "./examples/SocialIcons";
 export default function App() {
   return (
     <>
@@ -44,6 +45,9 @@ export default function App() {
             <div>
               <Link to="/card-scale">Scale Card</Link>
             </div>
+            <div>
+              <Link to="/social-icons">Social icons</Link>
+            </div>
           </Route>
           <Route path="/example-1">
             <ExampleOne />
@@ -71,6 +75,9 @@ export default function App() {
           </Route>
           <Route path="/card-scale">
             <ScaleCard />
+          </Route>
+          <Route path="/social-icons">
+            <SocialIcons />
           </Route>
         </Switch>
       </Router>

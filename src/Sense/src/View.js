@@ -5,9 +5,16 @@ export default function View({
   onClick,
   className,
   scaleRef,
+  data,
 }) {
   return (
-    <div ref={scaleRef} className={className} onClick={onClick} style={style}>
+    <div
+      ref={scaleRef}
+      data={data}
+      className={className}
+      onClick={onClick}
+      style={style}
+    >
       {children}
     </div>
   );
